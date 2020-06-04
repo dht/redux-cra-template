@@ -1,0 +1,35 @@
+.Icon-container {
+    color: #333;
+
+    &.circle {
+        background-color: #eee;
+        text-align: center;
+    }
+
+    &.green {
+        background-color: #00ba4d;
+        color: #fff;
+    }
+
+    &.orange {
+        background-color: orange;
+        color: #fff;
+    }
+
+    &.hover {
+        cursor: pointer;
+
+        &:hover {
+            color: palevioletred;
+        }
+    }
+
+    &.disabled {
+        cursor: default;
+        color: #ccc;
+
+        &:hover {
+            color: #ccc;
+        }
+    }
+}

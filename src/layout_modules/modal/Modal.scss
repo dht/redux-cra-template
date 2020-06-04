@@ -1,0 +1,114 @@
+.Modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 997;
+
+    > .overlay {
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 998;
+        transition: opacity 200ms linear;
+        opacity: 0;
+
+        &.show {
+            opacity: 1;
+        }
+    }
+
+    > .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+
+        > .modal {
+            background-color: white;
+            border-radius: 20rem;
+            animation-duration: 200ms;
+            padding: 0 30rem 20rem;
+            overflow: auto;
+            min-height: 170rem;
+            // max-height: 430rem;
+            position: relative;
+
+            > .close {
+                position: absolute;
+                top: 17rem;
+                right: 10rem;
+                font-size: 20rem;
+                z-index: 9;
+            }
+
+            .header {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 15rem 20rem 15rem 0;
+                border-bottom: 1px solid #ccc;
+                font-size: 20rem;
+            }
+
+            > .content {
+                padding-top: 10rem;
+                font-size: 16rem;
+                margin-bottom: 30rem;
+                line-height: 26rem;
+            }
+
+            .error {
+                color: red;
+                margin-bottom: 10rem;
+            }
+
+            > .actions {
+                display: flex;
+                // flex-direction: row-reverse;
+                align-items: center;
+                justify-content: flex-start;
+
+                .btn {
+                    margin-left: 10rem;
+                }
+            }
+
+            &.simple {
+                padding: 0;
+                border-radius: 0;
+                overflow: visible;
+                max-width: 800px;
+
+                > .content {
+                    padding: 0;
+                    margin: 0;
+                }
+
+                > .header,
+                > .actions {
+                    display: none;
+                }
+            }
+
+            &.wide {
+                max-width: 800rem;
+                width: 800rem;
+
+                > .content {
+                    width: 790rem;
+                    max-width: 790rem !important;
+                }
+            }
+        }
+    }
+}

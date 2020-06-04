@@ -1,0 +1,41 @@
+.Dialog-container {
+    min-width: 300rem;
+
+    > .dialog-header {
+        padding: 10rem;
+
+        h1 {
+            font-size: 24rem;
+            font-weight: 200;
+        }
+    }
+
+    > .dialog-content {
+        padding: 10rem;
+
+        .field {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            label {
+                width: 50rem;
+            }
+
+            input {
+                padding: 1rem 5rem;
+            }
+        }
+    }
+
+    > .dialog-actions {
+        padding: 10rem;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        button {
+            margin-right: 5rem;
+        }
+    }
+}

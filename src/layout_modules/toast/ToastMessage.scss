@@ -1,0 +1,80 @@
+.ToastMessage-container {
+    background-color: #222;
+    width: 300rem;
+    min-height: 55rem;
+    margin: 10rem;
+    box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.3);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    color: #ddd;
+
+    .bar {
+        width: 30rem;
+        background-color: green;
+        position: relative;
+
+        .filler {
+            background-color: rgba(255, 255, 255, 0.15);
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            animation: filler 5s;
+        }
+
+        .icon {
+            display: flex;
+            align-items: flex-start;
+            padding-top: 10rem;
+            color: #ddd;
+            opacity: 0.9;
+            font-size: 13rem;
+            justify-content: center;
+        }
+    }
+
+    .content {
+        padding: 5rem;
+        position: relative;
+        flex: 1;
+        display: flex;
+        padding: 10rem;
+        align-items: flex-start;
+
+        .icon {
+            position: absolute;
+            padding: 4rem;
+            cursor: pointer;
+            top: 0;
+            right: 0;
+            pointer-events: all;
+
+            span {
+                color: #666;
+                font-size: 14rem;
+            }
+        }
+    }
+
+    &.warning {
+        .bar {
+            background-color: goldenrod;
+        }
+    }
+
+    &.error {
+        .bar {
+            background-color: darkred;
+        }
+    }
+}
+
+@keyframes filler {
+    0% {
+        height: 100%;
+    }
+    100% {
+        height: 0%;
+    }
+}

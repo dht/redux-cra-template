@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import ToastContainer from "./components/ToastContainer";
+import RootModalContainer from "./components/RootModalContainer";
+import Fa from "./layout_modules/fa/Fa";
+import { Button } from "semantic-ui-react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(props) {
+    const { user } = props,
+        { name } = user;
+
+    return (
+        <div className="App-container">
+            <h1>Site</h1>
+            <Button onClick={props.showToast}>Show toast</Button>
+            <Button onClick={props.openDialog}>Show dialog</Button>
+            <p>name: {name}</p>
+            <p>You can press F2 to trigger an onKey</p>
+            <p>Icons</p>
+            <Fa family={"fab"} icon={"aws"} />
+            <i className="material-icons">extension</i>
+            <ToastContainer />
+            <RootModalContainer />
+        </div>
+    );
 }
 
 export default App;
