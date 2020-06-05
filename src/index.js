@@ -9,16 +9,19 @@ import { createBrowserHistory } from "history";
 import globals from "./utils/globals";
 import "./icons";
 import * as serviceWorker from "./serviceWorker";
+import { Provider as ProviderFluent, themes } from "@fluentui/react-northstar";
 
 globals.history = createBrowserHistory();
 
 ReactDOM.render(
     <Provider store={store}>
-        <Router history={globals.history}>
-            <Switch>
-                <Route path="/" exact={true} component={App} />
-            </Switch>
-        </Router>
+        <ProviderFluent theme={themes.teams}>
+            <Router history={globals.history}>
+                <Switch>
+                    <Route path="/" exact={true} component={App} />
+                </Switch>
+            </Router>
+        </ProviderFluent>
     </Provider>,
     document.getElementById("root")
 );

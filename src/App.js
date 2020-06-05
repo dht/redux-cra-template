@@ -3,7 +3,7 @@ import "./App.scss";
 import ToastContainer from "./components/ToastContainer";
 import RootModalContainer from "./components/RootModalContainer";
 import Fa from "./layout_modules/fa/Fa";
-import { Button } from "semantic-ui-react";
+import { Button } from "@fluentui/react-northstar";
 
 function App(props) {
     const { user } = props,

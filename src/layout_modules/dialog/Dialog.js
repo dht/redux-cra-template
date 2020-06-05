@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Dialog.scss";
 import Modal from "../modal/Modal";
 import { useSetState } from "react-use";
-import { Button } from "semantic-ui-react";
+import { Button, Input } from "@fluentui/react-northstar";
 
 function Dialog(props) {
     const [data, setData] = useSetState(props.data);
@@ -23,7 +23,7 @@ function Dialog(props) {
         return (
             <div className="field" key={id}>
                 <label>{title}</label>
-                <input defaultValue={data[id]}></input>
+                <Input placeholder="Search..." defaultValue={data[id]} />
             </div>
         );
     }

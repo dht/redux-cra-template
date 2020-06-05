@@ -2,7 +2,7 @@ import React from "react";
 import Loader from "../loader/Loader";
 import Icon from "../icon/Icon";
 import "./Button.scss";
-import { Button as ButtonSemantic } from "semantic-ui-react";
+import { Button as ButtonUI } from "@fluentui/react-northstar";
 
 const Spinner = props => <Loader className={props.classes.spinner} size={20} />;
 
@@ -28,7 +28,7 @@ function Button(props) {
     }
 
     return (
-        <ButtonSemantic
+        <ButtonUI
             {...rest}
             onClick={onClick}
             className="Button-container"
@@ -38,7 +38,7 @@ function Button(props) {
             {props.children}
 
             {loading && <Spinner {...rest} />}
-        </ButtonSemantic>
+        </ButtonUI>
     );
 }
 
